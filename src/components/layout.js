@@ -4,7 +4,7 @@ import Footer from "../components/footer"
 
 const Layout = ({ children }) => {
     return (
-        <div className="p-5">
+        <div className="p-5 text-zinc-900">
             <Header />
             {children}
             <Footer />

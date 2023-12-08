@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <div className="App">
-            <div className="container mx-auto">
+            <div className="container">
                 <header className="flex justify-between">
                     <div className="flex flex-row items-center">
                         <Link to="/">
@@ -21,7 +21,7 @@ const Header = () => {
                     </div>
                     {/* ハンバーガーメニュー */}
                     <div>
-                        <button onClick={handleMenuOpen} type="button" className="z-20 space-y-2 fixed top-4 right-4" aria-label="Toggle Menu">
+                        <button onClick={handleMenuOpen} type="button" className="z-20 space-y-2 fixed top-4 right-4 mt-5" aria-label="Toggle Menu">
                             <div
                                 className={
                                     openMenu
@@ -48,20 +48,26 @@ const Header = () => {
                         {/* link */}
                         <nav className={
                             openMenu
-                                ? 'text-left fixed bg-slate-50 right-0 top-0 w-3/12 h-screen flex flex-col justify-start pt-8 px-3 ease-linear duration-300'
+                                ? 'text-left fixed bg-slate-400 right-0 top-0 w-3/12 h-screen flex flex-col justify-start pt-8 ease-linear duration-300'
                                 : 'fixed right-[-100%]'
                             }
                         >
-                            <ul className="mt-6">
-                                <li>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link to="/about">About</Link>
-                                </li>
-                                <li>
-                                    <Link to="/skills">Skills</Link>
-                                </li>
+                            <ul className="mt-10 ">
+                                <Link to="/">
+                                    <li className="border-t-2 border-b-2 text-center hover:bg-slate-300 h-10 flex items-center justify-center">
+                                        Home
+                                    </li>
+                                </Link>
+                                <Link to="/about">
+                                    <li className="border-b-2 text-center hover:bg-slate-300 h-10 flex items-center justify-center">
+                                        About
+                                    </li>
+                                </Link>
+                                <Link to="/skills">
+                                    <li className="border-b-2 hover:bg-slate-300 h-10 flex items-center justify-center">
+                                        Skills
+                                    </li>
+                                </Link>
                             </ul>
                         </nav>
                     </div>
