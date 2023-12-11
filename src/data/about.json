@@ -1,17 +1,27 @@
 [
     {
-        "Company": "目黒区IT企業(SIer)",
-        "AffiliationPeriod": "2022/04 ~ 現在",
-        "EmploymentStatus": "正社員",
-        "WorkDescription": ["Java研修", "ビジネス研修", "システム開発", "既存顧客への保守対応", "社内システムの開発"],
-        "Works": [
+        "BasicInformation":[
+            {
+                "NickName": "coromaruboy(ころまるぼーい)",
+                "BirthPlace": "東京都",
+                "Age": "25",
+                "Hobbies": ["ゲーム", "プログラミング", "コーヒー", "自転車"]
+            }
+        ],
+        "Work" : [
+            {
+                "Career": "新卒2年目",
+                "WorkPlace": "目黒区SIer"
+            }
+        ],
+        "DevelopmentHistory": [
             {
                 "ProjectName": "交通費精算システム",
                 "ProjectPeriod": "2022/7 ~ 2022/10",
                 "Overview": "社内の交通費申請を管理するシステム。",
                 "ResponsiblePhase": "要件定義、設計、開発、テスト、デプロイ、運用・保守",
                 "MainProcessing": "申請書検索、承認、精算書Excel発行、賃上げ対応",
-                "langage": "Java/Spring Framework",
+                "language": "Java/Spring Framework",
                 "OS": "Windows",
                 "DB": "MySQL"
             },
@@ -21,7 +31,7 @@
                 "Overview": "Excelで管理していた面談シートをシステム化。",
                 "ResponsiblePhase": "要件定義、設計、開発、テスト、デプロイ、運用・保守",
                 "MainProcessing": "面談シート、面談履歴、社員検索",
-                "langage": "Java/Spring Framework",
+                "language": "Java/Spring Framework",
                 "OS": "Windows",
                 "DB": "MySQL"
             },
@@ -31,7 +41,7 @@
                 "Overview": "お客様が紙面で管理していた帳票5種をシステム化。",
                 "ResponsiblePhase": "要件定義、設計、開発、テスト",
                 "MainProcessing": "帳票入力部分、承認、履歴検索、更新",
-                "langage": "Java/JSP・Servlet",
+                "language": "Java/JSP・Servlet",
                 "OS": "Windows",
                 "DB": "Oracle"
             }

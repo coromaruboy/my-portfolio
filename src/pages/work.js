@@ -13,6 +13,7 @@ const Work = () => {
                     Company
                     AffiliationPeriod
                     EmploymentStatus
+                    WorkDescription
                     Works {
                         ProjectName
                         ProjectPeriod
@@ -33,10 +34,19 @@ const Work = () => {
 
         return (
             <>
-                <div>会社:{workData.Company}</div>
-                <div>期間:{workData.AffiliationPeriod}</div>
+                <div>基本情報</div>
+                <hr></hr>
                 <div>
-                    <div>業務内容</div>
+                    <div>・企業：</div>
+                    <div>{workData.Company}</div>
+                </div>
+                <div>・期間：{workData.AffiliationPeriod}</div>
+                <div>・業務内容:
+                    {workData.WorkDescription.map((description, index) => {
+                        return <div key={index}>{description}</div>
+                    })}
+                </div>
+                <div>
                     {workData.Works && workData.Works.map((work, index) => (
                     <div key={index}>
                         <div>プロジェクト名: {work.ProjectName}</div>
@@ -53,7 +63,6 @@ const Work = () => {
             {renderWorkList()}
         </Layout>
     )
-    
 }
 
 export default Work;

@@ -15,7 +15,7 @@ const Header = () => {
         borderBottom: "2px solid gray"
     }
 
-    const NavMenuItem = ["Home", "About", "Work", "Skills"];
+    const NavMenuItem = ["Home", "About", "Skills"];
 
     const NavItemLiTag = NavMenuItem.map((item) => {
         let page_link = "";
@@ -39,15 +39,15 @@ const Header = () => {
     return (
         <div className="mt-10">
             <div className="">
-                <header className="grid grid-cols-12 flex justify-between">
-                    <div className="flex flex-row items-center col-span-4">
+                <header className="grid grid-cols-12 justify-between">
+                    <div className="flex flex-row items-center col-span-6">
                         <Link to="/">
                             <img src={LOGO_IMG} alt="logo" width={60} height={60}/>
                         </Link>
                         <p>coromaruboy's portfolio</p>
                     </div>
                     {/* link */}
-                    <nav className="col-span-8">
+                    <nav className="col-span-6">
                         <ul className="grid grid-cols-4 mt-10">
                             {NavItemLiTag}
                         </ul>
