@@ -1,0 +1,36 @@
+[
+    {
+        "language": "Java",
+        "level": "★★☆☆☆",
+        "frameWork": [
+            {
+                "title": "Spring Framework",
+                "level": "★★☆☆☆"
+            },
+            {
+                "title": "JSP/Servlet",
+                "level": "★★☆☆☆"
+            }
+        ]
+    },
+    {
+        "language": "Python",
+        "level": "★☆☆☆☆",
+        "frameWork": [
+        ]
+    },
+    {
+        "language": "JavaScript",
+        "level": "★★☆☆☆",
+        "frameWork": [
+            {
+                "title": "JQuery",
+                "level": "★★☆☆☆"
+            },
+            {
+                "title": "React",
+                "level": "★☆☆☆☆"
+            }
+        ]
+    }
+]

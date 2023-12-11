@@ -15,7 +15,7 @@ const Header = () => {
         borderBottom: "2px solid gray"
     }
 
-    const NavMenuItem = ["Home", "About", "Skills"];
+    const NavMenuItem = ["Home", "About", "Work", "Skills"];
 
     const NavItemLiTag = NavMenuItem.map((item) => {
         let page_link = "";
@@ -29,7 +29,7 @@ const Header = () => {
             <li key={page_link}>
                 <Link to={page_link} style={LinkStyles}
                     activeStyle={ActiveStyles}
-                    className="h-10 flex items-center justify-center">
+                    className="h-10 flex items-center justify-center hover:text-gray-400">
                     {item}
                 </Link>
             </li>
@@ -39,16 +39,16 @@ const Header = () => {
     return (
         <div className="mt-10">
             <div className="">
-                <header className="grid grid-cols-2 flex justify-between">
-                    <div className="flex flex-row items-center">
+                <header className="grid grid-cols-12 flex justify-between">
+                    <div className="flex flex-row items-center col-span-4">
                         <Link to="/">
                             <img src={LOGO_IMG} alt="logo" width={60} height={60}/>
                         </Link>
                         <p>coromaruboy's portfolio</p>
                     </div>
                     {/* link */}
-                    <nav>
-                        <ul className="grid grid-cols-3 mt-10">
+                    <nav className="col-span-8">
+                        <ul className="grid grid-cols-4 mt-10">
                             {NavItemLiTag}
                         </ul>
                     </nav>
