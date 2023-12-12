@@ -47,7 +47,7 @@ const Skills = () => {
         };
 
         return (
-            <div>
+            <div className="font-body">
                 <div className="grid grid-cols-12">
                     <div className="col-span-6 text-xl">言語</div>
                     <div className="col-span-6">フレームワーク</div>
