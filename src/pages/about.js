@@ -41,22 +41,20 @@ const About = () => {
     const renderAboutList = () => {
 
         const basicInfo = data.allDataJson.edges[0].node.basicInformation;
+        const wrokInfo = data.allDataJson.edges[0].node.work;
 
         return (
             <>
-                <div className='container mt-5'>
-                    <div>基本情報</div>
-                    <hr className='mb-2 h-px bg-black'/>
-                    <div className='container rounded-md bg-slate-200'>
-                        <div>・ニックネーム：{basicInfo.nickName}</div>
+                <div className='container rounded-md mt-5 bg-slate-200 border border-black p-5'>
+                    <div className='mt-5 mb-5 text-2xl font-bold border-b border-indigo-400'>基本情報</div>
+                    <div className='container'>
+                        <div>・名前：{basicInfo.nickName}</div>
                         <div>・出身：{basicInfo.birthPlace}</div>
                         <div>・年齢：{basicInfo.age}歳(2023年)</div>
-                        <div>・趣味：
-                        {basicInfo.hobbies.map((item, index) => (
-                            <div key={index}>{item}</div>
-                        ))}
-                        </div>
+                        <div>・趣味：{basicInfo.hobbies.join(', ')}</div>
                     </div>
+                    <div className='mt-5 mb-5 text-2xl font-bold'>仕事</div>
+
                 </div>
             </>
         )
