@@ -12,7 +12,7 @@ const Header = () => {
                     <Link to="/">
                         <img src={LOGO_IMG} alt="logo" width={60} height={60}/>
                     </Link>
-                    <p classname='title-font font-medium'>coromaruboy's portfolio</p>
+                    <p className='title-font font-medium'>coromaruboy's portfolio</p>
                 </div>
                 {/* link */}
                 {Navbar('head')}

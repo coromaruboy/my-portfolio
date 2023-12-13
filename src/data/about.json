@@ -7,15 +7,15 @@
     },
     "work": {
         "career": "新卒2年目",
-        "workPlace": "目黒区SIer"
+        "workPlace": "目黒区(SIer)"
     },
     "developmentHistory": [
         {
         "projectName": "交通費精算システム",
         "projectPeriod": "2022/7 ~ 2022/10",
         "overview": "社内の交通費申請を管理するシステム。",
-        "responsiblePhase": "要件定義、設計、開発、テスト、デプロイ、運用・保守",
-        "mainProcessing": "申請書検索、承認、精算書Excel発行、賃上げ対応",
+        "responsiblePhase": ["要件定義", "設計", "開発", "テスト", "デプロイ", "運用・保守"],
+        "mainProcessing": ["申請書検索", "承認", "精算書Excel発行", "賃上げ対応"],
         "language": "Java/Spring Framework",
         "os": "Windows",
         "db": "MySQL"
@@ -24,8 +24,8 @@
         "projectName": "面談管理システム",
         "projectPeriod": "2022/10 ~ 2022/12",
         "overview": "Excelで管理していた面談シートをシステム化。",
-        "responsiblePhase": "要件定義、設計、開発、テスト、デプロイ、運用・保守",
-        "mainProcessing": "面談シート、面談履歴、社員検索",
+        "responsiblePhase": ["要件定義", "設計", "開発", "テスト", "デプロイ", "運用・保守"],
+        "mainProcessing": ["面談シート", "面談履歴", "社員検索"],
         "language": "Java/Spring Framework",
         "os": "Windows",
         "db": "MySQL"
@@ -34,8 +34,8 @@
             "projectName": "帳票電子化",
             "projectPeriod": "2023/1 ~ 現在",
             "overview": "お客様が紙面で管理していた帳票5種をシステム化。",
-            "responsiblePhase": "要件定義、設計、開発、テスト",
-            "mainProcessing": "帳票入力部分、承認、履歴検索、更新",
+            "responsiblePhase": ["要件定義", "設計", "開発", "テスト"],
+            "mainProcessing": ["帳票入力部分", "承認", "履歴検索", "更新", "QRコード読取", "ファイルアップロード"],
             "language": "Java/JSP・Servlet",
             "os": "Windows",
             "db": "Oracle"
