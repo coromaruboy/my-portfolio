@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout"
 import Template from "../components/template";
@@ -6,6 +6,7 @@ import Template from "../components/template";
 const title = "Skills";
 
 const Skills = () => {
+    const [ isOpen, setIsOpen ] = useState(false)
     const data = useStaticQuery(graphql`
         query {
             allSkillJson {
@@ -21,10 +22,51 @@ const Skills = () => {
         }
     `);
 
+    const handleClick = () => {
+        setIsOpen(!isOpen)
+    }
+
+    const renderLevelList = () => {
+        return (
+            <>
+                <div className="border-b border-black flex justify-between">
+                    <div>レベル表</div>
+                    <button onClick={handleClick} type='button' className='inline-flex justify-center leading-5 font-medium hover:text-gray-500 focus:outline-none active:text-gray-800'>
+                        {(isOpen ? '△' : '▽')}
+                    </button>
+                </div>
+                {isOpen && (
+                    <>
+                        <div>
+                            <div>★☆☆☆☆</div>
+                            <div>初学者レベル</div>
+                        </div>
+                        <div>
+                            <div>★★☆☆☆</div>
+                            <div>実務経験あり</div>
+                        </div>
+                        <div>
+                            <div>★★★☆☆</div>
+                            <div>教えることができる</div>
+                        </div>
+                        <div>
+                            <div>★★★★☆</div>
+                            <div>任せられる</div>
+                        </div>
+                        <div>
+                            <div>★★★★★</div>
+                            <div>何でもできる</div>
+                        </div>
+                    </>
+                )}
+            </>
+        )
+    }
+
     const renderSkillList = () => {
         const languages = data.allSkillJson.nodes;
 
-        const dummyDiv = (index) => {
+        const createDummyDiv = (index) => {
             if(index > 0) return <div className="col-span-6"></div>
         } 
 
@@ -34,7 +76,7 @@ const Skills = () => {
                 return (
                     currentLanguage.frameWork.map((framework, i) => (
                     <>
-                        {dummyDiv(i)}
+                        {createDummyDiv(i)}
                         <div key={i} className="col-span-6 grid grid-cols-12">
                             <p className="col-span-6">{framework.title}</p>
                             <p  className="col-span-6">{framework.level}</p>
@@ -48,6 +90,7 @@ const Skills = () => {
 
         return (
             <div className="font-body">
+                {renderLevelList()}
                 <div className="grid grid-cols-12">
                     <div className="col-span-6 text-xl">言語</div>
                     <div className="col-span-6">フレームワーク</div>
